@@ -3,9 +3,9 @@
 /**
  * print_square - prints hashes squares.
  * @size: size of the square.
+ *
  * Return: no return.
  */
-
 void print_square(int size)
 {
 	int i, j;
@@ -21,4 +21,3 @@ void print_square(int size)
 	}
 	_putchar('\n');
 }
-
