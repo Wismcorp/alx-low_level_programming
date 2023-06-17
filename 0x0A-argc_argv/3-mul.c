@@ -1,28 +1,24 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc: arg count
- * @argv: arg vector
- * Return: success
+ * main - multiply 2 numbers passed to main, or Error
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 1 if error, 0 if function runs correctly
  */
+
 int main(int argc, char *argv[])
 {
-	int result = 1, i;
+	(void) argc;
 
-	if (argc == 3)
+	if (argv[1] && argv[2])
 	{
-		for (i = 1; i < argc; i++)
-			result = result * strtol(argv[i], NULL, 10);
-		printf("%d\n", result);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		return (0);
 	}
 	else
-	{
 		printf("Error\n");
-		return (1);
-	}
-
-	return (0);
+	return (1);
 }
-

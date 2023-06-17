@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * power_operation - returns the natural square root of a number.
@@ -18,7 +19,7 @@ int power_operation(int n, int c)
 	return (0 + power_operation(n, c + 1));
 }
 /**
- * _sqrt_recursion - returns the natural square root of a number.
+ * * _sqrt_recursion - returns the natural square root of a number.
  * @n: input number.
  * Return: natural square root.
  */
@@ -32,4 +33,3 @@ int _sqrt_recursion(int n)
 		return (1);
 	return (power_operation(n, 2));
 }
-

@@ -1,18 +1,19 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * free_dog - frees dogs.
- * @d: struct dog.
- *
- * Return: no return.
+ * free_dog - free memory of dog
+ * @d: poiner to dog
  */
+
 void free_dog(dog_t *d)
 {
 	if (d)
 	{
-		free(d->name);
-		free(d->owner);
+		if (d->name)
+			free(d->name);
+		if (d->owner)
+			free(d->owner);
 		free(d);
 	}
 }

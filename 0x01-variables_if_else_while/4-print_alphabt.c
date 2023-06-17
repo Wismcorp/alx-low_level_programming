@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 /**
- *main-program entry point.
- *Return:0 if no error, non zero if error.
- **/
+ * main - Entry point
+ *
+ * Description: This program prints the lowercase alphabet,
+ * excluding the letters 'e' and 'q'.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	char i;
+	char ch;
 
-	for (i = 'a'; i <= 'z'; i++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (i == 'e' || i == 'q')
-			continue;
-		putchar(i);
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch); /* Print the character if it is not 'e' or 'q' */
+		}
 	}
-	putchar('\n');
-	return (0);
-}
+	putchar('\n'); /* Print a new line after printing the alphabet */
 
+	return (0); /* program has executed successfully */
+}

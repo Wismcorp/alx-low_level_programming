@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * wildcmp - compares two strings.
  * @s1: string 1.
@@ -18,5 +16,3 @@ int wildcmp(char *s1, char *s2)
 		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
 	return (0);
 }
-
-

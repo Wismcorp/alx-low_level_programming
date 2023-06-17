@@ -1,23 +1,23 @@
+#include <stdio.h>
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * rev_string - Reverses a string.
- * @s: string to be reserved.
+ * rev_string - Reverse a string
+ * @s: string to be reversed
+ *
+ * Return: returns nothing
  */
+
 void rev_string(char *s)
 {
-	int i = 0, len = 0;
-	char tmp;
+	int i;
+	char t;
 
-	while (s[i++])
-		len++;
-
-	for (i = len - 1; i >= len / 2; i--)
+	for (i = 0; i < _strlen(s) / 2; i++)
 	{
-		tmp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = tmp;
+		t = s[i];
+		s[i] = s[_strlen(s) - i - 1];
+		s[_strlen(s) - i - 1] = t;
 	}
 }
-
-
